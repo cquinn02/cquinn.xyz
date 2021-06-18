@@ -1,11 +1,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import "./index.scss";
+import Background from "./components/background";
 
 const app = (): JSX.Element => {
     return (
         <div className="app">
-            <h1>Conor Quinn</h1>
+            <Background></Background>
         </div>
     );
 }
