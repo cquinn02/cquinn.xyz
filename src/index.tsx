@@ -1,6 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import Background from "./components/background";
+import "./app.scss";
+
 
 const app = (): JSX.Element => {
     return (

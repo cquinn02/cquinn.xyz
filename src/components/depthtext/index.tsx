@@ -11,11 +11,11 @@ type Props = {
 };
 
 const DepthText = ({ text, size, height }: Props): JSX.Element => {
-    const font = new THREE.FontLoader().parse(Poppins);
-    const texture = new THREE.TextureLoader().load(Coral);
-    texture.wrapS = THREE.RepeatWrapping
-    texture.wrapT = THREE.RepeatWrapping
-    texture.repeat.set(0.1, 0.1);
+    const font: THREE.Font = new THREE.FontLoader().parse(Poppins);
+    const texture: THREE.Texture = new THREE.TextureLoader().load(Coral);
+    texture.wrapS = THREE.RepeatWrapping;
+    texture.wrapT = THREE.RepeatWrapping;
+    texture.repeat.set(0.2, 0.2);
 
     const textOptions = {
         font,
@@ -24,9 +24,9 @@ const DepthText = ({ text, size, height }: Props): JSX.Element => {
     };
 
     return (
-        <mesh>
-            <textGeometry attach='geometry' args={[text, textOptions]} />
-            <meshStandardMaterial attach='material' />
+        <mesh position={[-5, 5, -10]} rotation={[0.6, 0.1, 0]} >
+            <textGeometry attach="geometry" args={[text, textOptions]} />
+            <meshBasicMaterial color={"#2d81cc"} />
         </mesh>
     );
 }
